@@ -1,0 +1,73 @@
+.game_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    .winner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        height: 60px;
+    }
+    p {
+        font-size: 18px;
+        color: #4C241D;
+    }
+    .pc_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 0 0 10px;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            @media (max-width: 425px) {
+                flex-wrap: wrap;
+            }
+            li {
+                img {
+                    width: 100px;
+                    @media (max-width: 425px) {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .player_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 0;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            @media (max-width: 425px) {
+                flex-wrap: wrap;
+            }
+            li {
+                img {
+                    width: 100px;
+                    @media (max-width: 425px) {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+        .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+    }
+}

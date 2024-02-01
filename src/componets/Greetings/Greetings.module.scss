@@ -1,0 +1,20 @@
+.greetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 10px 0;
+    h3 {
+        font-size: 32px;
+        color: #4C241D;
+        text-align: center;
+    }
+    p {
+        font-size: 18px;
+        color: #4C241D;
+        text-align: center;
+    }
+    a {
+        text-decoration: underline;
+    }
+}

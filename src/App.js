@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Game from './componets/Game/Game';
+import Greetings from './componets/Greetings/Greetings';
+import Header from './componets/Header/Header';
+import Loading from './componets/UI/Loading/Loading';
 
 function App() {
+  const [begin, setBegin] = useState(false);
+  const [loading, setLodaing] = useState(false);
+  const beginHandler = () => {
+    setLodaing(true);
+    setTimeout(() => {
+      setLodaing(false);
+      setBegin(!begin);
+    }, 2000);
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {!loading && !begin && <Greetings onclick={beginHandler}/>}
+      {loading && <Loading />}
+      {begin && <Game loading={loading} setLodaing={setLodaing}/>}
     </div>
   );
 }
