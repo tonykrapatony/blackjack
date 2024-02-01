@@ -8,7 +8,7 @@ export default function Greetings({ onclick }) {
         <div className={s.greetings}>
             <h3>Hello! </h3>
             <p>Welcome to the Blackjack app.</p>
-            <p>Here you can play the simplest version of Blackjack. The <a href="https://deckofcardsapi.com/" target='_blank' rel="noopener noreferrer">Deck of Cards API</a> was used for development. To get started, click the Begin Game button below and then click New game.</p>
+            <p>Here you can play the simplest version of Blackjack. The <a href="https://deckofcardsapi.com/" target='_blank' rel="noopener noreferrer">Deck of Cards API</a> was used for development. To get started, click the Begin Game button below.</p>
             <PrimaryButton onclick={onclick}>Begin game</PrimaryButton>
         </div>
     )
